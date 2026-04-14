@@ -59,6 +59,24 @@
             z-index: 0;
         }
 
+        /* Grid Background Pattern */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
         @keyframes gradientShift {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
             33% { transform: translate(2%, 2%) rotate(1deg); }
@@ -323,7 +341,7 @@
         </div>
 
         <!-- Tagline -->
-        <p class="tagline">Fast. Private. Simple.</p>
+        <p class="tagline" id="tagline">Быстро. Приватно. Просто.</p>
 
         <!-- CTA Buttons -->
         <div class="button-container">
@@ -353,6 +371,14 @@
     </footer>
 
     <script>
+        // Randomly select a Russian tagline on each page load
+        const taglines = [
+            "Быстро. Приватно. Просто.",
+            "Интернет без границ",
+            "Свобода начинается здесь"
+        ];
+        document.getElementById('tagline').textContent = taglines[Math.floor(Math.random() * taglines.length)];
+
         // Smooth focus management for accessibility
         document.addEventListener('DOMContentLoaded', function() {
             const buttons = document.querySelectorAll('.btn');
