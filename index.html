@@ -122,6 +122,20 @@
             color: var(--accent-yellow);
         }
 
+        /* Tagline Styles */
+        .tagline {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            animation: fadeIn 0.8s ease-out 0.2s both;
+            max-width: 400px;
+            line-height: 1.5;
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
@@ -332,7 +346,8 @@
             <h1 class="brand-name">Cumpot<span class="brand-vpn">VPN</span></h1>
         </div>
 
-        <!-- Tagline (removed per request) -->
+        <!-- Tagline -->
+        <p class="tagline" id="tagline"></p>
 
         <!-- CTA Buttons -->
         <div class="button-container">
@@ -362,8 +377,21 @@
     </footer>
 
     <script>
+        // Random tagline selector
+        const taglines = [
+            "Интернет без границ",
+            "Свобода начинается здесь"
+        ];
+
         // Smooth focus management for accessibility
         document.addEventListener('DOMContentLoaded', function() {
+            // Set random tagline
+            const taglineElement = document.getElementById('tagline');
+            if (taglineElement) {
+                const randomTagline = taglines[Math.floor(Math.random() * taglines.length)];
+                taglineElement.textContent = randomTagline;
+            }
+
             const buttons = document.querySelectorAll('.btn');
             
             buttons.forEach(btn => {
