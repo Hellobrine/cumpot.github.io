@@ -110,29 +110,20 @@
         }
 
         .brand-name {
-            font-size: 1.125rem;
-            font-weight: 300;
-            color: var(--text-secondary);
-            letter-spacing: 0.1em;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
             margin-top: 0.75rem;
-            opacity: 0.8;
+        }
+
+        .brand-vpn {
+            color: var(--accent-blue);
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
-        }
-
-        /* Tagline */
-        .tagline {
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--text-secondary);
-            text-align: center;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-            animation: fadeIn 0.8s ease-out 0.2s both;
-            letter-spacing: 0.02em;
         }
 
         /* Button Container */
@@ -142,7 +133,7 @@
             gap: 1rem;
             width: 100%;
             max-width: 320px;
-            animation: fadeInUp 0.8s ease-out 0.4s both;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
         }
 
         /* Button Styles */
@@ -289,8 +280,8 @@
                 font-size: 1.25rem;
             }
 
-            .tagline {
-                font-size: 1.5rem;
+            .brand-name {
+                font-size: 1.25rem;
             }
 
             .button-container {
@@ -310,8 +301,8 @@
                 font-size: 6rem;
             }
 
-            .tagline {
-                font-size: 1.75rem;
+            .brand-name {
+                font-size: 2.5rem;
             }
         }
 
@@ -321,8 +312,8 @@
                 font-size: 3.5rem;
             }
 
-            .tagline {
-                font-size: 1.125rem;
+            .brand-name {
+                font-size: 1.75rem;
             }
 
             .btn {
@@ -337,11 +328,10 @@
         <!-- Logo Section -->
         <div class="logo-container">
             <span class="logo" role="img" aria-label="CumpotVPN Logo">✌️</span>
-            <h1 class="brand-name">CumpotVPN</h1>
+            <h1 class="brand-name">Cumpot<span class="brand-vpn">VPN</span></h1>
         </div>
 
-        <!-- Tagline -->
-        <p class="tagline" id="tagline">Быстро. Приватно. Просто.</p>
+        <!-- Tagline (removed per request) -->
 
         <!-- CTA Buttons -->
         <div class="button-container">
@@ -351,7 +341,7 @@
                 aria-label="Connect via Telegram Proxy"
                 rel="noopener"
             >
-                Connect via Proxy
+                Бесплатный прокси
             </a>
             <a 
                 href="https://t.me/cumpotvpn_bot" 
@@ -360,7 +350,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                Open Bot
+                Подключить
             </a>
         </div>
     </main>
@@ -371,14 +361,6 @@
     </footer>
 
     <script>
-        // Randomly select a Russian tagline on each page load
-        const taglines = [
-            "Быстро. Приватно. Просто.",
-            "Интернет без границ",
-            "Свобода начинается здесь"
-        ];
-        document.getElementById('tagline').textContent = taglines[Math.floor(Math.random() * taglines.length)];
-
         // Smooth focus management for accessibility
         document.addEventListener('DOMContentLoaded', function() {
             const buttons = document.querySelectorAll('.btn');
