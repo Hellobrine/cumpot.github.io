@@ -1,2 +1,1 @@
-# No changes needed - only source/config files were modified/deleted
-# The changes consist of HTML/CSS files which should not be ignored
+Nothing needs to be added to the .gitignore file since only a single HTML file was modified and no build artifacts, dependencies, or temporary files were detected in the changes.
