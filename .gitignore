@@ -1,1 +1,60 @@
-Nothing should be ignored since only a single HTML file was added without any build artifacts, dependencies, or temporary files.
+```
+# Compiled and build artifacts
+*.css.map
+*.min.css
+*.min.js
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Editors
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git/modules/
+*.sublime-workspace
+.pytest_cache/
+.hypothesis/
+.coverage*
+.eggs/
+.egg-info/
+*.egg-info/
+.installed.cfg
+*.manifest
+*.spec
+.mypy_cache/
+.pyre/
+.pytype/
+cython_debug/
+```
