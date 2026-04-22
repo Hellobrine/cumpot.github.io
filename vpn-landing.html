@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CumpotVPN - Бесплатный VPN прокси сервис</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet">
     <style>
         /* Resend-inspired Design System */
         * {
@@ -23,21 +24,22 @@
 
         /* Typography */
         .display-hero {
-            font-family: 'domaine', 'Georgia', serif;
-            font-size: 96px;
-            font-weight: 400;
-            line-height: 1.00;
-            letter-spacing: -0.96px;
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.6rem,6vw,4.8rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -.03em;
             margin-bottom: 20px;
+            animation: up .55s .1s ease both;
         }
 
         .section-heading {
             font-family: 'aBCFavorit', ui-sans-serif, system-ui, sans-serif;
-            font-size: 56px;
+            font-size: clamp(1.6rem,3.5vw,2.4rem);
             font-weight: 400;
             line-height: 1.20;
-            letter-spacing: -2.8px;
-            margin-bottom: 24px;
+            letter-spacing: -.02em;
+            margin-bottom: .65rem;
             margin-top: 4px;
         }
 
@@ -75,7 +77,7 @@
 
         /* Layout */
         .section {
-            padding: 80px 0;
+            padding: 80px 0px 20px 0px;
         }
 
         .container {
@@ -100,15 +102,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 24px;
+            padding: 12px 24px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .logo {
-            font-family: 'domaine', 'Georgia', serif;
+            font-family: system-ui;
             font-size: 24px;
-            font-weight: 400;
+            font-weight: 100;
         }
 
         .logo span {
@@ -220,7 +222,7 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            padding: 120px 24px 80px;
+            padding: 7rem 1.5rem 4rem;
         }
 
         .hero-content {
@@ -310,7 +312,7 @@
 
         /* VPN Settings Section */
         .vpn-wrap {
-            max-width: 800px;
+            max-width: 680px;
             margin: 0 auto;
             text-align: center;
         }
@@ -371,7 +373,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
         }
 
         .ping-badge {
@@ -485,6 +487,7 @@
             align-items: center;
             gap: 6px;
             transition: all 0.2s;
+            display: none;
         }
 
         .copy:hover {
@@ -560,7 +563,7 @@
 
         /* VPN Promo Section */
         .vpn-promo {
-            padding: 80px 0;
+            padding: 80px 0px 20px 0px;
         }
 
         .vpn-promo .vpn-wrap {
@@ -615,15 +618,15 @@
             border-radius: 9999px;
             font-size: 14px;
             font-weight: 500;
-            margin-bottom: 16px;
+            1margin-bottom: 16px;
         }
 
         .vpn-title {
             font-family: 'aBCFavorit', ui-sans-serif, system-ui, sans-serif;
-            font-size: 48px;
-            font-weight: 400;
+            font-size: clamp(1.4rem,3vw,2rem);
+            font-weight: 700;
             line-height: 1.2;
-            letter-spacing: -2.4px;
+            letter-spacing: -.02em;
             margin-bottom: 16px;
             color: #f0f0f0;
         }
@@ -640,25 +643,26 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #3b9eff;
+            background: #ff801f;
             color: #ffffff;
             border: none;
             border-radius: 9999px;
             padding: 12px 24px;
-            font-size: 16px;
+            font-size: 0.92rem;
             font-weight: 500;
             text-decoration: none;
             transition: all 0.2s;
         }
 
         .vpn-btn:hover {
-            background: #0075ff;
+            background: #ff9800;
             transform: translateY(-2px);
         }
 
         /* How To Section */
         .howto {
             background: rgba(0, 0, 0, 0.5);
+            text-align: center;
         }
 
         .steps {
@@ -668,6 +672,7 @@
             display: flex;
             flex-direction: column;
             gap: 32px;
+            text-align: left;
         }
 
         .step {
@@ -847,15 +852,15 @@
                 transform: rotate(-45deg) translate(7px, -6px);
             }
             
-            .display-hero {
+            .display1-hero {
                 font-size: 60px;
             }
             
-            .section-heading {
+            .section1-heading {
                 font-size: 40px;
             }
             
-            .ctas {
+            .ctas1 {
                 flex-direction: column;
                 width: 100%;
             }
@@ -870,7 +875,7 @@
             }
             
             .step {
-                flex-direction: column;
+                1flex-direction: column;
             }
             
             .grid {
@@ -904,7 +909,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="alive"><div class="dot"></div>Сервер онлайн</div>
-            <h1 class="display-hero">Бесплатный CumpotVPN<br>прокси для Telegram</h1>
+            <h1 class="display-hero">Бесплатный MTProto<br>прокси для Telegram</h1>
             <p class="body-large">Один клик — и серфинг без ограничений. Без регистрации, без оплат, навсегда бесплатно.</p>
             <div class="ctas">
                 <a href="#proxy" class="btn-dark">
@@ -981,7 +986,7 @@
                 <div class="vpn-inner">
                     <div class="vpn-tag">🎁 Попробуй месяц бесплатно</div>
                     <h2 class="vpn-title">Хочешь полноценный VPN?</h2>
-                    <p class="vpn-desc">Прокси работает только для браузера. Для защиты всего трафика и доступа к любым сайтам — попробуй CumpotVPN.</p>
+                    <p class="vpn-desc">Прокси работает только для Telegram. Для защиты всего трафика и доступа к любым сайтам — попробуй CumpotVPN.</p>
                     <a href="https://t.me/cumpotvpn_bot" target="_blank" class="vpn-btn">
                         Перейти к CumpotVPN
                         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
@@ -999,7 +1004,7 @@
             <div class="features-in">
                 <div class="label">Преимущества</div>
                 <h2 class="section-heading">Почему CumpotVPN?</h2>
-                <p class="body-text">Просто, быстро и бесплатно.</p>
+                <p class="body-text">Просто, быстро и надежно.</p>
                 
                 <div class="grid">
                     <div class="fc">
@@ -1008,12 +1013,12 @@
                         <div class="fd">Серфинг, стриминг и загрузка с молниеносной скоростью.</div>
                     </div>
                     <div class="fc">
-                        <div class="fi">🆓</div>
-                        <div class="ft">Полностью бесплатно</div>
-                        <div class="fd">Без регистрации, без карт. Просто подключайся и пользуйся.</div>
+                        <div class="fi">📱</div>
+                        <div class="ft">Простое подключение</div>
+                        <div class="fd">Подключился за 30 секунд — и ты уже в сети.</div>
                     </div>
                     <div class="fc">
-                        <div class="fi">🔄</div>
+                        <div class="fi">🔗</div>
                         <div class="ft">Стабильное соединение</div>
                         <div class="fd">Серверы мониторятся и поддерживаются в рабочем состоянии.</div>
                     </div>
